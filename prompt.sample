@@ -1,0 +1,10 @@
+# Put this in your .bash_profile and whenever a command fails the computer
+# will say "Fail".
+
+exitstatus()
+{
+    if [[ $? != 0 ]]; then
+        say "Fail"
+    fi
+}
+PS1='$(exitstatus)\h:\W \u\$ '
