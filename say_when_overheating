@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 while true; do
   temperature=$(sysctl machdep.xcpm.cpu_thermal_level | cut -d' ' -f2)
