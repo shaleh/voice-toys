@@ -1,0 +1,7 @@
+#!/bin/bash
+
+while true; do
+  temperature=$(sysctl machdep.xcpm.cpu_thermal_level | cut -d' ' -f2)
+  (( $temperature < 40 )) || say "CPU is overheating!"
+  sleep 1
+done
