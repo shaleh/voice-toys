@@ -6,4 +6,5 @@ else
     delay=$1
 fi
 
-sleep $delay && say -v Daniel "tea time"
+voice=$(say -v '?' | grep 'en_' | cut -f 1 -d ' ' | sort -R | head -n 1)
+sleep $delay && say -v "$voice" "tea time"
